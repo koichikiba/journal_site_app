@@ -25,7 +25,7 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        //
+        return view('articles.create');
     }
 
     /**
@@ -49,7 +49,7 @@ class ArticleController extends Controller
     {
         //#idで検索したデータをビューへ渡す
         $article = Article::find($id);
-        return view('article.show', ['article' => $article]);
+        return view('articles.show', ['article' => $article]);
     }
 
     /**
